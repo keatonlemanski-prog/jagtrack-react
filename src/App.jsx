@@ -1,49 +1,72 @@
-import { Container, Title, Text, Grid } from '@mantine/core'
+import { useState } from 'react'
 import Header from './components/Header'
-import ClassCard from './components/ClassCard'
-import WeekDay from './components/WeekDay'  // Add this import
+import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { classes } from './assets/data/classes'
+import HomePage from './pages/HomePage'
+import ClassesPage from './pages/ClassesPage'
+import AboutPage from './pages/AboutPage'
 import './App.css'
 
 
+
+
 function App() {
- return (
-   <div className="App">
-     <Header />
+// State to track which page is currently showing
+const [currentPage, setCurrentPage] = useState('home')
 
 
-     <Container size="xl" py="xl">
-       {/* Add WeekDay component here */}
-       <WeekDay />
 
 
-       <Title order={2} ta="center" mb="md">My 4 Classes</Title>
-       <Text ta="center" c="dimmed" mb="xl">
-         Current Quarter
-       </Text>
-
-
-       <Grid>
- {classes.map((classItem) => (
-   <Grid.Col
-     key={classItem.id}
-     span={{ base: 12, sm: 6, lg: 3 }}
-   >
-     <ClassCard {...classItem} />  {/* Changed to use spread operator */}
-   </Grid.Col>
- ))}
-</Grid>
-     </Container>
-
-
-     <Footer
-       schoolName="Jefferson Academy Secondary"
-       email="Keaton.Lemanski@jajags.com"
-     />
-   </div>
- )
+// Function to change the page
+const handlePageChange = (pageName) => {
+  setCurrentPage(pageName)
 }
+
+
+
+
+// Decide which page component to show
+let pageContent
+if (currentPage === 'home') {
+  pageContent = <HomePage />
+} else if (currentPage === 'classes') {
+  pageContent = <ClassesPage />
+} else if (currentPage === 'about') {
+  pageContent = <AboutPage />
+}
+
+
+
+
+return (
+  <div className="App">
+    <Header />
+
+
+
+
+    <Navigation
+      currentPage={currentPage}
+      onPageChange={handlePageChange}
+    />
+
+
+
+
+    {pageContent}
+
+
+
+
+    <Footer
+      schoolName="Jefferson Academy Secondary"
+      email="your.name@jajags.com"
+    />
+  </div>
+)
+}
+
+
 
 
 export default App
