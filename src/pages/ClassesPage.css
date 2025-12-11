@@ -131,7 +131,7 @@ transition: background-color 0.3s ease;
 background-color: #0f3a6f;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 .tabs-container {
   flex-direction: column;
 }

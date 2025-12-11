@@ -4,6 +4,8 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import ClassesPage from './pages/ClassesPage'
+import CalendarPage from './pages/CalendarPage'
+import AIChatPage from './pages/AIChatPage'  // Your existing AI Chat page
 import AboutPage from './pages/AboutPage'
 import './App.css'
 
@@ -11,59 +13,61 @@ import './App.css'
 
 
 function App() {
-// State to track which page is currently showing
-const [currentPage, setCurrentPage] = useState('home')
+ const [currentPage, setCurrentPage] = useState('home')
 
 
 
 
-// Function to change the page
-const handlePageChange = (pageName) => {
-  setCurrentPage(pageName)
-}
+ const handlePageChange = (pageName) => {
+   setCurrentPage(pageName)
+ }
 
 
 
 
-// Decide which page component to show
-let pageContent
-if (currentPage === 'home') {
-  pageContent = <HomePage />
-} else if (currentPage === 'classes') {
-  pageContent = <ClassesPage />
-} else if (currentPage === 'about') {
-  pageContent = <AboutPage />
-}
+ // Decide which page component to show
+ let pageContent
+ if (currentPage === 'home') {
+   pageContent = <HomePage />
+ } else if (currentPage === 'classes') {
+   pageContent = <ClassesPage />
+ } else if (currentPage === 'calendar') {
+   pageContent = <CalendarPage />
+ } else if (currentPage === 'aichat') {
+   pageContent = <AIChatPage />
+ } else if (currentPage === 'about') {
+   pageContent = <AboutPage />
+ }
 
 
 
 
-return (
-  <div className="App">
-    <Header />
+ return (
+   <div className="App">
+     <Header />
 
 
 
 
-    <Navigation
-      currentPage={currentPage}
-      onPageChange={handlePageChange}
-    />
+     <Navigation
+       currentPage={currentPage}
+       onPageChange={handlePageChange}
+     />
 
 
 
 
-    {pageContent}
+     {pageContent}
 
 
 
 
-    <Footer
-      schoolName="Jefferson Academy Secondary"
-      email="your.name@jajags.com"
-    />
-  </div>
-)
+     <Footer
+       schoolName="Jefferson Academy Secondary"
+       email="Keaton.Lemanski@jajags.com"
+     />
+   </div>
+ )
 }
 
 

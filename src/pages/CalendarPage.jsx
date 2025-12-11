@@ -1,50 +1,15 @@
-import { Container, Title, Text, Grid, Paper, Divider } from '@mantine/core'
-import ClassCard from '../components/ClassCard'
-import WeekDay from '../components/WeekDay'
-import { classes } from '../assets/data/classes'
+import { Container, Title, Text, Paper } from '@mantine/core'
+import './CalendarPage.css'
 
 
 
 
-function HomePage() {
+function CalendarPage() {
  return (
    <Container size="xl" py="xl">
-     <WeekDay />
-
-
-
-
-     <Title order={2} ta="center" mb="md">My 4 Classes</Title>
+     <Title order={2} ta="center" mb="md">Calendar & Deadlines</Title>
      <Text ta="center" c="dimmed" mb="xl">
-       Current Quarter
-     </Text>
-
-
-
-
-     <Grid>
-       {classes.map((classItem) => (
-         <Grid.Col
-           key={classItem.id}
-           span={{ base: 12, sm: 6, lg: 3 }}
-         >
-           <ClassCard {...classItem} />
-         </Grid.Col>
-       ))}
-     </Grid>
-
-
-
-
-     <Divider my="xl" />
-
-
-
-
-     {/* Upcoming Assignments Section */}
-     <Title order={2} ta="center" mb="md">Upcoming Assignments</Title>
-     <Text ta="center" c="dimmed" mb="xl">
-       Your Canvas assignments sync automatically
+       Your Canvas assignments automatically sync to this calendar. Never miss a deadline!
      </Text>
 
 
@@ -60,11 +25,19 @@ function HomePage() {
          ></iframe>
        </div>
      </Paper>
+
+
+
+
+     <Text size="sm" c="dimmed" ta="center" mt="md" className="mobile-tip">
+       <strong>Mobile Tip:</strong> For a better experience on small screens,{' '}
+       <a href="https://calendar.google.com/calendar/ical/keaton.lemanski%40jajags.com/public/basic.ics" target="_blank" rel="noopener noreferrer">
+         open calendar in new tab
+       </a>
+     </Text>
    </Container>
  )
 }
 
+export default CalendarPage
 
-
-
-export default HomePage
