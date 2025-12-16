@@ -1,10 +1,28 @@
-import { Group, Button } from '@mantine/core'
+import { Group, Button, ActionIcon } from '@mantine/core'
+import { IconSun, IconMoon } from '@tabler/icons-react'
+import { toggleTheme, getCurrentTheme } from '../themeToggle'
+import { useState } from 'react'
 import './Navigation.css'
 
 
 
 
 function Navigation({ currentPage, onPageChange }) {
+ // State to track current theme (for icon)
+ const [theme, setTheme] = useState(getCurrentTheme())
+
+
+
+
+ // Handle theme toggle click
+ const handleThemeToggle = () => {
+   toggleTheme()
+   setTheme(getCurrentTheme())
+ }
+
+
+
+
  return (
    <nav className="navigation">
      <div className="nav-container">
@@ -33,17 +51,24 @@ function Navigation({ currentPage, onPageChange }) {
            Calendar
          </Button>
          <Button
-           variant={currentPage === 'aichat' ? 'filled' : 'subtle'}
-           onClick={() => onPageChange('aichat')}
-         >
-           AI Chat
-         </Button>
-         <Button
            variant={currentPage === 'about' ? 'filled' : 'subtle'}
            onClick={() => onPageChange('about')}
          >
            About Me
          </Button>
+
+
+
+
+         {/* Theme toggle button */}
+         <ActionIcon
+           variant="subtle"
+           size="lg"
+           onClick={handleThemeToggle}
+           aria-label="Toggle theme"
+         >
+           {theme === 'dark' ? <IconSun size={20} /> : <IconMoon size={20} />}
+         </ActionIcon>
        </Group>
      </div>
    </nav>

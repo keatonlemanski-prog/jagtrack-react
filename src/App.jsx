@@ -22,9 +22,6 @@ function App() {
    setCurrentPage(pageName)
  }
 
-
-
-
  // Decide which page component to show
  let pageContent
  if (currentPage === 'home') {

@@ -1,0 +1,54 @@
+===== JAGTRACK REACT - MODULE 2 =====
+Student: Keaton Lemanski
+Date: 12/15/25
+
+My Classes:
+Chemistry: I was offerd it in Biology and I took it because it was more advanced.
+JavaScript Programming: I wanted to know more about coding and figured I would need to take it at some point.
+Collage U.S History: I love History and mostly took the class for fun with the bonus of collage credits.
+Teen Choices: This was a required course that I had to take to pass.
+
+EXERCISE 1: NAVIGATION & TABS
+
+
+Classes Page Design:
+The color scheme that I chose for of the tabs was the default. I belived that it worked the best for my vision.
+I belive that I did complete the responsive tabs challange. The most challenging thing about them was getting them to 
+go to the right place, they would often not work or go to a different page.
+
+EXERCISE 2: GOOGLE CALENDAR INTEGRATION
+
+
+Calendar Setup:
+- Did you create a new calendar or use an existing one? [I used the existing one that as on canvas and just imported it.]
+- How many Canvas iCal feeds did you add? [1]
+- Did you add them individually by course or as one combined feed? [I only added the 1 individually because I was having problems in getting to different and more calendars from canvas.]
+
+Reflection:
+[Write 3-4 sentences about the calendar integration:
+- How will this calendar help you stay organized? I can keep track of dates and when work is due.
+- What challenges did you face getting it set up? Trying to import the calendar from canvas and getting to it in the first place. 
+- Did you customize the calendar view? Which view do you prefer?] No, I liked it the way it was imported.
+
+EXERCISE 3: DARK/LIGHT MODE TOGGLE
+
+Color Scheme Design:
+[Write 4-5 sentences about your color choices:
+- What colors did you choose for light mode? Why? Mostly White, it fit the best for a light mode.
+- What colors did you choose for dark mode? Why? I chose dark Blue and Black. This is because the theme was red and blue so I thought it would look good. 
+- How do your color choices reflect your personality or style? I like the color Blue.
+- How did you ensure good contrast for accessibility?] I made the tabs different colors.
+
+
+
+
+Theme Preferences:
+- Which theme do you prefer personally and why? [I prefer the light theme, I just think that it looks better.]
+- When do you think dark mode is most useful? [During a late night or in a dark room.]
+
+
+
+JavaScript Understanding:
+The toggle theme function allows you to change the theme colors.
+LocalStorage is what holds infromation about jagtrack, It holds them localy so it is on the storage drive. 
+The theme preference presists when I reload the page because it is a functiont that is ran through when the app is started or updated. 
