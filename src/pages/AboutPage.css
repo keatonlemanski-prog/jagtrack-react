@@ -1,0 +1,10 @@
+.profile-section {
+ background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent-color) 100%);
+ color: var(--text-light);
+ margin-bottom: 2rem;
+}
+
+
+
+
+/* Add any other custom styles you want */

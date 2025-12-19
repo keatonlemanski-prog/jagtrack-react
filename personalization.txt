@@ -52,3 +52,18 @@ JavaScript Understanding:
 The toggle theme function allows you to change the theme colors.
 LocalStorage is what holds infromation about jagtrack, It holds them localy so it is on the storage drive. 
 The theme preference presists when I reload the page because it is a functiont that is ran through when the app is started or updated. 
+
+
+About Me Page:
+I followed the instructions that were on the document. I wrote out the about me on a google doc and copy pasted it in. I was however having problems with the pfp and adding it so I needed to import the link.
+
+OVERALL MODULE 2 REFLECTION
+What I Learned:
+The most challenging part of Module 2 was getting things to import correctly. There were a lot of problems with it and things would just not import correctly so I needed to figure it out.
+I am most proud of the way that it turned out in the end. I like that it is usable.
+My understanding of how overall code worked in react. It vastly improved during my time working on module two.
+I would like to learn things about AI and AI coding next.
+
+Real-World Application:
+I probably wont get the chance to use it super often sence I can already use most of its functions on canvas. But I will still use it for the calendar and getting to canvas.
+A feature that I may add in the feuture is disableing the test mode on the AI interface. 
